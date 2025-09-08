@@ -1,7 +1,8 @@
-yolov11n.pt
+yolo11n.pt
 yolov8l.pt
 yolov8n.pt
 
+/runs
 /weights_yolo_dataset
 /venv
 /kinetics600_5per

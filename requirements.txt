@@ -1,0 +1,12 @@
+Flask
+Werkzeug
+opencv-python
+mediapipe
+numpy
+pandas
+scikit-learn
+xgboost
+protobuf
+tensorflow
+torch
+ultralytics
