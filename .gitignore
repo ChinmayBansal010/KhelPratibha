@@ -1,0 +1,9 @@
+yolov11n.pt
+yolov8l.pt
+yolov8n.pt
+
+/weights_yolo_dataset
+/venv
+/kinetics600_5per
+__pycache__
+*.pyc
