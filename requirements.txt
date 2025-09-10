@@ -1,12 +1,7 @@
-Flask
-Werkzeug
-opencv-python
+fastapi
+uvicorn[standard]
+python-multipart
 mediapipe
 numpy
-pandas
-scikit-learn
-xgboost
-protobuf
-tensorflow
-torch
-ultralytics
+opencv-python-headless
+requests
