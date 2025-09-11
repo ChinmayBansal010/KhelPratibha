@@ -8,12 +8,12 @@ API_URL = "http://127.0.0.1:8000/api/v1/analysis/"
 # IMPORTANT: Download a test video and place it in the root of the sports_analyzer directory.
 # Rename the video to "test_video.mp4" or update the filename below.
 # Sample video link: https://www.pexels.com/video/a-man-sprinting-on-a-running-track-5893899/
-VIDEO_PATH = "sprint2.mp4"
+VIDEO_PATH = "high_jump.mp4"
 
 # --- Athlete Data ---
 # These values are sent along with the video, just like in the app.
 payload = {
-    "sport": "sprint",
+    "sport": "high_jump",
     "athlete_height_m": 1.8  # Height in meters (e.g., 1.8m is ~5'11")
 }
 

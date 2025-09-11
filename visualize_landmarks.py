@@ -5,7 +5,7 @@ import os
 
 # --- Configuration ---
 # Update this to the video you want to process. Use 0 for webcam.
-INPUT_VIDEO_PATH = "sprint.mp4" 
+INPUT_VIDEO_PATH = "high_jump.mp4" 
 
 print("--- Starting Real-Time Landmark Visualization ---")
 print("Press 'q' to quit the video window.")
@@ -36,7 +36,8 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
 
         # Flip the image horizontally for a later selfie-view display
         # and convert the BGR image to RGB.
-        image = cv2.cvtColor(cv2.flip(frame, 1), cv2.COLOR_BGR2RGB)
+        cv2.resize(frame, (400, 400))
+        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         
         # To improve performance, optionally mark the image as not writeable to
         # pass by reference.
