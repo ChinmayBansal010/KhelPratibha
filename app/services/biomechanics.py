@@ -3,18 +3,19 @@ import cv2
 import mediapipe as mp
 from typing import List, Tuple, Dict, Any
 from .analysis.track import sprint, hurdles
-from .analysis import jumps, throws
+from .analysis.jumps import high_jump, long_jump
+from .analysis.throws import short_put, javelin_throw, discus_throw
 
 mp_pose = mp.solutions.pose
 
 _CALCULATION_FUNCTIONS = {
     "sprint": sprint.calculate_sprint_metrics,
     "hurdles": hurdles.calculate_hurdles_metrics,
-    # "high_jump": jumps.calculate_high_jump_metrics,
-    # "long_jump": jumps.calculate_long_jump_metrics,
-    # "shot_put": throws.calculate_shot_put_metrics,
-    # "javelin": throws.calculate_javelin_throw_metrics,
-    # "discus": throws.calculate_discus_throw_metrics,
+    "high_jump": high_jump.calculate_high_jump_metrics,
+    "long_jump": long_jump.calculate_long_jump_metrics,
+    "shot_put": short_put.calculate_shot_put_metrics,
+    "javelin": javelin_throw.calculate_javelin_throw_metrics,
+    "discus": discus_throw.calculate_discus_throw_metrics,
 }
 
 def process_video(video_path: str) -> Tuple[List[Any], float]:
